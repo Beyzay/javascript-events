@@ -14,3 +14,14 @@ hoverBtn.addEventListener("mouseleave", () => {
     hoverBtnMsg.style.backgroundColor = "";
 });
 
+// ---------------------------------------------------------------------------------------------------- //
+// Keyboard Events
+// Display the last key pressed by the user inside the input field
+
+let keyInput = document.getElementById("key-input");
+let keyInputMsg = document.getElementById("key-input-msg");
+
+keyInput.addEventListener("keydown", (e) => {
+    keyInputMsg.textContent = "Last key pressed: " + e.key;
+});
+
