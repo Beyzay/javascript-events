@@ -47,3 +47,21 @@ couponForm.addEventListener("submit", (e) => {
     couponForm.reset();
 });
 
+// ---------------------------------------------------------------------------------------------------- //
+// Focus and Blur Events
+// Update the message when the input field gains or loses focus
+
+let focusInput = document.getElementById("focus-input");
+let focusInputMsg = document.getElementById("focus-input-msg");
+
+focusInput.addEventListener("focus", () => {
+    focusInput.placeholder = "🔮"
+    focusInput.classList.add("dim-placeholder");
+    focusInputMsg.textContent = "You're focused on the input now."
+});
+
+focusInput.addEventListener("blur", () => {
+    focusInput.placeholder = "Focus here (not just telepathically)"
+    focusInputMsg.textContent = "Lost focus... Focus on the input to rediscover."
+});
+
