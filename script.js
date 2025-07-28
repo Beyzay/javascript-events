@@ -65,3 +65,17 @@ focusInput.addEventListener("blur", () => {
     focusInputMsg.textContent = "Lost focus... Focus on the input to rediscover."
 });
 
+// ---------------------------------------------------------------------------------------------------- //
+// Event Delegation
+// Handle clicks on each button (Display a unique message for each)
+
+let delegationBtnContainer = document.getElementById("delegation-btn-container");
+let delegationBtnMsg = document.getElementById("delegation-btn-msg");
+
+delegationBtnContainer.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+        delegationBtnMsg.textContent = "Activated " + e.target.textContent + "!";
+    }
+});
+
+// ---------------------------------------------------------------------------------------------------- //
