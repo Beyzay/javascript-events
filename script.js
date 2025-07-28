@@ -25,3 +25,25 @@ keyInput.addEventListener("keydown", (e) => {
     keyInputMsg.textContent = "Last key pressed: " + e.key;
 });
 
+// ---------------------------------------------------------------------------------------------------- //
+// Form Events
+// Handle form submission (Display a submission message without refreshing the page)
+
+let couponForm = document.getElementById("coupon-form");
+let couponFormSuccessMsg = document.getElementById("coupon-form-success-msg");
+
+couponForm.addEventListener("submit", (e) => {
+    // Prevent default page reload
+    e.preventDefault();
+
+    // Clear previous success message
+    couponFormSuccessMsg.textContent = ""
+
+    // Display a success message
+    couponFormSuccessMsg.textContent = "Coupon code submitted."
+    console.log("Coupon form submitted");
+    
+    // Clear form
+    couponForm.reset();
+});
+
